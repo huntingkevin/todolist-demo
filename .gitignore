@@ -1,6 +1,6 @@
 
-.gitignore
 /node_modules/
 /dist/
 /.idea/workspace.xml
 /.idea/vcs.xml
+.idea/inspectionProfiles/
