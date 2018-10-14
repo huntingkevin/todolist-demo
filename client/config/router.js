@@ -1,9 +1,27 @@
 import Router from 'vue-router'
 
-import routers from './router'
+import routes from './routes'
 
 export default () => {
   return new Router({
-    routers
+    routes,
+    mode: 'history',
+    // base: '/base/'
+    linkActiveClass: 'active-link',
+    linkExactActiveClass: 'extact-active-link',
+    scrollBehavior (to, from, savedPosition) {
+      if (savedPosition) {
+        return savedPosition
+      } else {
+        return { x: 0, y: 0 }
+      }
+    }
+    // fallback: true
+    // parseQuery (query) {
+    //
+    // },
+    // stringifyQuery (obj) {
+    //
+    // }
   })
 }
